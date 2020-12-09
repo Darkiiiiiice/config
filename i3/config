@@ -56,12 +56,14 @@ exec --no-startup-id fcitx
 exec --no-startup-id picom -b  
 
 ### Wall Paper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/backgrounds/background_cyber.jpg
+exec --no-startup-id feh --bg-scale $HOME/Picture/backgrounds/18.jpg
 
 ### Yakuake
 exec --no-startup-id yakuake
 ######################################################################################
 
+### Conky
+exec --no-startup-id conky -c ~/.config/conky/conky.conf
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -210,13 +212,13 @@ bindsym $mod+r mode "resize"
 # }
 
 ### theme
-new_window none
+#new_window none
 new_float  normal
 title_align center
 #default_border pixel 2 
 hide_edge_borders both 
-gaps inner 6
-gaps outer 0
+gaps inner 2
+gaps outer 8
 
 ### Custom Bind System
 bindsym control+mod1+l exec i3lock-fancy
@@ -227,3 +229,11 @@ bindsym mod1+space exec krunner
 for_window [class="yakuake"] floating enable
 #for_window [class="jetbrains-goland"] floating disable
 #for_window [class="jetbrains-clion"] floating disable
+#
+
+## class                    border    backgr.    text       indicator  child_border
+client.focused              #393E46   #222831    #FFD359    #FFFFFF    #5294e2
+client.focused_inavtive     #EEEEEE   #393E46    #EEEEEE    #FFFFFF    #5294e2
+client.unfocused            #393E46   #393E46    #EEEEEE    #FFFFFF    #5294e2
+client.focused              #393E46   #222831    #FFD359    #FFFFFF    #5294e2
+client.background          #222830
