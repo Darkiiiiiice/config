@@ -1,0 +1,19 @@
+configuration {
+    modi: "ssh";
+    width: 30;
+    lines: 16;
+    columns: 2;
+    /* font: ""; */
+    bw: 1;
+    location: 0;
+    padding: 6;
+    yoffset: 280;
+    xoffset: 420;
+    fixed-num-lines: true;
+    show-icons: true;
+    // icon-theme: unset;
+    cycle: true;
+    sidebar-mode: true;
+    eh: 1;
+    theme: "mario.rasi";
+}
