@@ -56,7 +56,7 @@ exec --no-startup-id fcitx
 exec --no-startup-id picom -b  
 
 ### Wall Paper
-exec --no-startup-id feh --bg-scale $HOME/Picture/backgrounds/18.jpg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/backgrounds/background_cyber.jpg
 
 ### Yakuake
 exec --no-startup-id yakuake
@@ -75,7 +75,7 @@ bindsym $mod+Return exec konsole
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show drun  -theme Monokai
+bindsym $mod+d exec rofi -show drun  -theme mario
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -216,9 +216,9 @@ bindsym $mod+r mode "resize"
 new_float  normal
 title_align center
 #default_border pixel 2 
-hide_edge_borders both 
-gaps inner 2
-gaps outer 8
+hide_edge_borders vertical
+gaps inner 0
+gaps outer 0
 
 ### Custom Bind System
 bindsym control+mod1+l exec i3lock-fancy
@@ -227,13 +227,14 @@ bindsym mod1+space exec krunner
 
 ## 
 for_window [class="yakuake"] floating enable
+for_window [class="tilda"] floating enable
 #for_window [class="jetbrains-goland"] floating disable
 #for_window [class="jetbrains-clion"] floating disable
 #
 
 ## class                    border    backgr.    text       indicator  child_border
-client.focused              #393E46   #222831    #FFD359    #FFFFFF    #5294e2
-client.focused_inavtive     #EEEEEE   #393E46    #EEEEEE    #FFFFFF    #5294e2
-client.unfocused            #393E46   #393E46    #EEEEEE    #FFFFFF    #5294e2
-client.focused              #393E46   #222831    #FFD359    #FFFFFF    #5294e2
+client.focused              #393E46   #222831    #C5EB46    #FFFFFF    #5294e2
+client.focused_inavtive     #393E46   #393E46    #EEEEEE    #FFFFFF    #5294e2
+client.unfocused            #393E46   #393E46    #EEEEEE    #FFFFFF    #393E46
+client.focused              #F1FF55   #F1FF55    #464A19    #FFAAAA    #C7D346
 client.background          #222830
