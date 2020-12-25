@@ -100,7 +100,7 @@ Plug 'chxuan/vimplus-startify'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Go  Golang插件
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim NerdTree 文件树
@@ -266,6 +266,11 @@ augroup end
 " Applying codeAction to the selected region
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" coc.nvim-golang
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
+
 
 
 " -------------------- vim coc.nvim configuration finished --------------------
