@@ -130,8 +130,8 @@ Plug 'iamcco/markdown-preview.nvim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Debug Plugin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'puremourning/vimspector'
-"
+Plug 'puremourning/vimspector', {'do': 'python ./install_gadget.py --enable-python --enable-go --enable-c --enable-bash --enable-rust --enable-node'}
+
 call plug#end()
 
 
