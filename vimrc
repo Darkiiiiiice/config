@@ -277,9 +277,11 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 
-
-
 " -------------------- vim coc.nvim configuration finished --------------------
+"
+" ------------------- vimspector.vim configuration --------------------
+let g:vimspector_enable_mappings='HUMAN'
+" ------------------- vimspector.vim configuration finished --------------------
 "
 " 
 " -------------------- vim custom keymap configuration --------------------
