@@ -107,6 +107,7 @@ Plug 'chxuan/vimplus-startify'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Yggdroot/LeaderF'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Airline 状态栏 
@@ -126,6 +127,11 @@ Plug 'jiangmiao/auto-pairs'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'gruvbox-community/gruvbox'
 Plug 'iamcco/markdown-preview.nvim'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Debug Plugin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'puremourning/vimspector'
+"
 call plug#end()
 
 
