@@ -66,6 +66,7 @@ set foldmethod=indent
 set foldlevel=99
 set scrolloff=5
 set updatetime=100
+set maxmempattern=4000          " 模式匹配使用的最大内存"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 定制状态栏
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,6 +82,8 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " Vim Plug 包管理
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
+
+Plug 'preservim/tagbar'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Scripteas
@@ -100,7 +103,7 @@ Plug 'chxuan/vimplus-startify'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim Go  Golang插件
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim NerdTree 文件树
@@ -130,7 +133,7 @@ Plug 'iamcco/markdown-preview.nvim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Debug Plugin
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'puremourning/vimspector', {'do': 'python ./install_gadget.py --enable-python --enable-go --enable-c --enable-bash --enable-rust --enable-node'}
+Plug 'puremourning/vimspector', {'do': 'python ./install_gadget.py --enable-python --enable-go --enable-c --enable-bash --enable-rust'}
 
 call plug#end()
 
@@ -138,6 +141,34 @@ call plug#end()
 set bg=dark                     "设置背景为黑色
 colorscheme gruvbox             "设置主题为 gruvbox
 set guioptions=                 "去掉两边的scrollbar
+
+let g:tagbar_type_go = {
+        \ 'ctagstype' : 'go',
+        \ 'kinds' : [
+            \ 'p:package',
+            \ 'i:imports:1',
+            \ 'c:constants',
+            \ 'v:variables',
+            \ 't:types',
+            \ 'n:interfaces',
+            \ 'w:fields',
+            \ 'e:embedded',
+            \ 'm:methods',
+            \ 'r:constructor',
+            \ 'f:functions'
+        \  ],
+        \ 'sro' : '.',
+        \ 'kind2scope' : {
+            \ 't': 'ctype',
+            \ 'n': 'ntype'
+        \ },
+        \ 'scope2kind' : {
+            \ 'ctype': 't',
+            \ 'ntype': 'n'
+        \ },
+        \ 'ctagsbin' : 'gotags',
+        \ 'ctagsargs' : '-sort -silent'
+\}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
