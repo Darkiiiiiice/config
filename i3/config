@@ -56,7 +56,7 @@ exec --no-startup-id fcitx
 exec --no-startup-id picom -b  
 
 ### Wall Paper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/backgrounds/background_cyber.jpg
+exec --no-startup-id feh --bg-scale $HOME/pictures/backgrounds/main.jpg
 
 ### Yakuake
 exec --no-startup-id yakuake
@@ -69,7 +69,7 @@ exec --no-startup-id conky -c ~/.config/conky/conky.conf
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole 
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -173,7 +173,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-msg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -222,7 +222,7 @@ gaps outer 0
 
 ### Custom Bind System
 bindsym control+mod1+l exec i3lock-fancy
-bindsym mod1+space exec krunner
+# bindsym mod1+space exec krunner
 
 
 ## 
