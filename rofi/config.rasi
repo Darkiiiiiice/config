@@ -1,9 +1,9 @@
 configuration {
     modi: "ssh";
-    width: 30;
+    width: 60;
     lines: 16;
     columns: 2;
-    /* font: ""; */
+    font: "Fira Code 19";
     bw: 1;
     location: 0;
     padding: 6;

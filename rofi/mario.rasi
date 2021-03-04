@@ -46,7 +46,7 @@
     highlight:     underline bold #ffffff;
 
     transparent: rgba(0,0,0,0);
-    font: "Source Code Pro 10";
+    font: "Fira Code 18";
 }
 window {
     location: center;
@@ -75,7 +75,7 @@ message {
     background-color: @tcyan;
 }
 message {
-    font: "Source Code Pro 8";
+    font: "Fira Code 16";
     color: @black;
 }
 
@@ -86,7 +86,7 @@ inputbar {
     border: 2px 2px 2px 2px;
     border-radius:  15px 15px 0px 0px;
     border-color: @foreground;
-    font: "Source Code Pro 18";
+    font: "Fira Code 18";
 }
 entry,prompt,case-indicator {
     text-font: inherit;

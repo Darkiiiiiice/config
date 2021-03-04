@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Postman
+Icon=/home/mariomang/local/Postman/app/resources/app/assets/icon.png
+Exec="/home/mariomang/local/Postman/Postman" %f
+Comment=Simplify each step of building an API and streamline collaboration so you can create better APIs-faster
+Categories=Development;
+Terminal=false
+StartupWMClass=postman
+StartupNotify=true

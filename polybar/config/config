@@ -31,7 +31,7 @@ cyber_yellow = #F1FF55
 [bar/mariomang]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 32
+height = 48
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -52,8 +52,8 @@ padding-right = 0
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Fira Code:size=10:style=Medium:pixelsize=10;0
-font-1 = Font Awesome 5 Brands:size=8:style=Solid:;0
+font-0 = Fira Code:size=16:style=Medium:pixelsize=16;0
+font-1 = Font Awesome 5 Brands:size=10:style=Solid:;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3 wlan eth
