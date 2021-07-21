@@ -41,7 +41,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 ######################################################################################
 ### Resolution   
-#exec --no-startup-id xrandr --output HDMI-1 --mode 2560x1440 
+exec --no-startup-id xrandr --output eDP --mode 2880x1800 --auto --primary
+exec --no-startup-id xrandr --output DisplayPort-0 --mode 1920x1080 --left-of eDP --rotate left
 
 ### Polybar
 exec_always --no-startup-id $HOME/.config/polybar/config/launch.sh
@@ -56,10 +57,13 @@ exec --no-startup-id fcitx5
 exec --no-startup-id picom -b  
 
 ### Wall Paper
-exec --no-startup-id feh --bg-scale $HOME/pictures/backgrounds/main.jpg
+exec --no-startup-id feh --bg-scale $HOME/pictures/backgrounds/main.jpg $HOME/pictures/backgrounds/main_2.jpg
 
 ### Yakuake
 #exec --no-startup-id yakuake
+#
+### Tilda
+exec --no-startup-id tilda
 ######################################################################################
 
 ### Conky
@@ -231,6 +235,9 @@ for_window [class="tilda"] floating enable
 #for_window [class="jetbrains-goland"] floating disable
 #for_window [class="jetbrains-clion"] floating disable
 #
+#
+## workspace
+workspace 10 output DisplayPort-0
 
 ## class                    border    backgr.    text       indicator  child_border
 client.focused              #393E46   #222831    #C5EB46    #FFFFFF    #5294e2
